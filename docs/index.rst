@@ -5,4 +5,4 @@ Table Of Contents
    :maxdepth: 3
 
    quick_start
-   resource
+   resources

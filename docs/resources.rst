@@ -1,12 +1,13 @@
-Resource
-========
+Resources
+=========
 
 ``MultipartResourceMixin``
 --------------------------
 
 Extends Tastypie Resource with upload image possibility.
 
-Usage::
+Usage
+::
 
     class ImageResource(MultipartResourceMixin, ModelResource):
         image = FileField()

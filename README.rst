@@ -9,8 +9,8 @@ Django Tastypie extras
 
 A set of Django Tastypie extras.
 
-Resource
-========
+Resources
+=========
 
 MultipartResourceMixin
 ----------------------
