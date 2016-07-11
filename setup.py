@@ -10,7 +10,7 @@ setup(
     author=__author__,
     author_email=__email__,
     url='https://github.com/tomi77/django-tastypie-extras',
-    description='A set of Django tastypie extras',
+    description='A set of Django tastypie extras (Multipart resource, smart paginator)',
     long_description=open("README.rst").read(),
     classifiers=[
         'Development Status :: 4 - Beta',

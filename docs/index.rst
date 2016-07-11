@@ -6,3 +6,4 @@ Table Of Contents
 
    quick_start
    resources
+   paginator

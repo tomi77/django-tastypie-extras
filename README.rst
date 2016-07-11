@@ -16,3 +16,11 @@ MultipartResourceMixin
 ----------------------
 
 Resource with upload image possibility
+
+Paginator
+=========
+
+SmartPaginator
+--------------
+
+``SmartPaginator`` does not perform ``SELECT COUNT(*)`` when ``limit`` is 0.
