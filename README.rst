@@ -23,4 +23,4 @@ Paginator
 SmartPaginator
 --------------
 
-``SmartPaginator`` does not perform ``SELECT COUNT(*)`` when ``limit`` is 0.
+``SmartPaginator`` does not perform ``SELECT COUNT(*)`` when ``limit`` is 0 and ``offset`` is 0.

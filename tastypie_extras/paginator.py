@@ -14,19 +14,19 @@ class SmartPaginator(Paginator):
     ``previous``/``next`` pages of data as available.
 
     This implementation does not perform ``SELECT COUNT(*)`` when
-    ``limit`` is 0.
+    ``limit`` is 0 and ``offset`` is 0.
     """
-    def get_count(self, objects=None, limit=None, offset=None):
+    def get_count(self, limit=None, offset=None):
         if limit in (0, self.max_limit) and offset == 0:
-            return len(list(objects))
+            return len(list(self.objects))
         else:
             return super(SmartPaginator, self).get_count()
 
     def page(self):
         limit = self.get_limit()
         offset = self.get_offset()
+        count = self.get_count(limit=limit, offset=offset)
         objects = self.get_slice(limit, offset)
-        count = self.get_count(objects=objects, limit=limit, offset=offset)
         meta = {
             'offset': offset,
             'limit': limit,
