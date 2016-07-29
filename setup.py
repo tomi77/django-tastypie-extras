@@ -2,13 +2,11 @@ from codecs import open
 
 from setuptools import setup, find_packages
 
-from tastypie_extras import __version__, __author__, __email__, __license__
-
 setup(
     name="django-tastypie-extras",
-    version=__version__,
-    author=__author__,
-    author_email=__email__,
+    version='0.2.0b2',
+    author='Tomasz Jakub Rup',
+    author_email='tomasz.rup@gmail.com',
     url='https://github.com/tomi77/django-tastypie-extras',
     description='A set of Django tastypie extras (Multipart resource, smart paginator)',
     long_description=open("README.rst").read(),
@@ -29,6 +27,6 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Utilities',
     ],
-    license=__license__,
+    license='MIT',
     packages=find_packages()
 )
