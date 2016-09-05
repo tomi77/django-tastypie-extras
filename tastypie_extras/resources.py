@@ -3,7 +3,7 @@ Tastypie resource mixins
 """
 from django.core.exceptions import MultipleObjectsReturned
 from tastypie import http
-from tastypie.exceptions import NotFound
+from tastypie.exceptions import NotFound, BadRequest
 from tastypie.utils.dict import dict_strip_unicode_keys
 
 
@@ -103,3 +103,24 @@ class MultipartResourceMixin(object):
             return self.create_response(request, updated_bundle,
                                         response_class=http.HttpCreated,
                                         location=location)
+
+
+
+class ReadOnlyResourceMixin(object):
+    def obj_update(self, bundle, **kwargs):
+        raise BadRequest("Operation not permitted")
+
+    def obj_create(self, bundle, **kwargs):
+        raise BadRequest("Operation not permitted")
+
+    def rollback(self, bundles):
+        raise BadRequest("Operation not permitted")
+
+    def obj_delete(self, bundle, **kwargs):
+        raise BadRequest("Operation not permitted")
+
+    def obj_delete_list(self, bundle, **kwargs):
+        raise BadRequest("Operation not permitted")
+
+    def obj_delete_list_for_update(self, bundle, **kwargs):
+        raise BadRequest("Operation not permitted")

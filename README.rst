@@ -17,6 +17,11 @@ MultipartResourceMixin
 
 Resource with upload image possibility
 
+ReadOnlyResourceMixin
+---------------------
+
+Raise `BadRequest` on `update`, `create` or `delete` request.
+
 Paginator
 =========
 
