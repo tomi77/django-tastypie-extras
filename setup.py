@@ -4,11 +4,11 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-tastypie-extras",
-    version='0.3b1',
+    version='0.4b1',
     author='Tomasz Jakub Rup',
     author_email='tomasz.rup@gmail.com',
     url='https://github.com/tomi77/django-tastypie-extras',
-    description='A set of Django tastypie extras (Multipart resource, smart paginator)',
+    description='A set of Django tastypie extras (Multipart resource, smart paginator, SwaggerUI authentication)',
     long_description=open("README.rst").read(),
     classifiers=[
         'Development Status :: 4 - Beta',

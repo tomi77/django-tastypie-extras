@@ -29,3 +29,20 @@ SmartPaginator
 --------------
 
 ``SmartPaginator`` does not perform ``SELECT COUNT(*)`` when ``limit`` is 0 and ``offset`` is 0.
+
+Authentication
+==============
+
+SwaggerApiKeyAuthentication
+---------------------------
+
+`SwaggerUI` provides request authentication only through ``api_key`` parameter.
+``SwaggerApiKeyAuthentication`` reads `username` and `api_key` from ``api_key`` request parameter.
+
+Serializers
+===========
+
+CSVSerializerMixin
+------------------
+
+Serializer to/from CSV
