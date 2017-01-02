@@ -38,11 +38,3 @@ SwaggerApiKeyAuthentication
 
 `SwaggerUI` provides request authentication only through ``api_key`` parameter.
 ``SwaggerApiKeyAuthentication`` reads `username` and `api_key` from ``api_key`` request parameter.
-
-Serializers
-===========
-
-CSVSerializerMixin
-------------------
-
-Serializer to/from CSV
