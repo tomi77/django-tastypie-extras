@@ -9,6 +9,22 @@ Django Tastypie extras
 
 A set of Django Tastypie extras.
 
+Table of contents
+=================
+
+* `Resources`_
+
+  * `MultipartResourceMixin`_
+  * `ReadOnlyResourceMixin`_
+
+* `Paginator`_
+
+  * `SmartPaginator`_
+
+* `Authentication`_
+
+  * `SwaggerApiKeyAuthentication`_
+
 Resources
 =========
 
