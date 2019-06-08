@@ -8,3 +8,4 @@ Table Of Contents
    resources
    paginator
    authentication
+   serializers

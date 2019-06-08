@@ -29,6 +29,10 @@ Table of contents
 
   * `MimeTypeField`_
 
+* `Serializers`_
+
+  * `CSVSerializerMixin`_
+
 Resources
 =========
 
@@ -67,3 +71,10 @@ MimeTypeField
 
 ReadOnly field
 
+Serializers
+===========
+
+CSVSerializerMixin
+------------------
+
+Serializer to/from CSV

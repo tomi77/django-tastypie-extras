@@ -8,7 +8,7 @@ setup(
     author='Tomasz Jakub Rup',
     author_email='tomasz.rup@gmail.com',
     url='https://github.com/tomi77/django-tastypie-extras',
-    description='A set of Django tastypie extras (Multipart resource, smart paginator, SwaggerUI authentication)',
+    description='A set of Django tastypie extras (Multipart resource, smart paginator, SwaggerUI authentication, CSV serializer)',
     long_description=open("README.rst").read(),
     classifiers=[
         'Development Status :: 4 - Beta',
@@ -22,11 +22,19 @@ setup(
         'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
         'Topic :: Software Development',
         'Topic :: Software Development :: Libraries',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Utilities',
     ],
     license='MIT',
-    packages=find_packages()
+    packages=find_packages(),
+    install_requires=[
+        'django-extras'
+    ],
+    extras_require={
+        'csv': ['unicodecsv'],
+    }
 )
