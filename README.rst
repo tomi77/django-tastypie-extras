@@ -25,6 +25,10 @@ Table of contents
 
   * `SwaggerApiKeyAuthentication`_
 
+* `Fields`_
+
+  * `MimeTypeField`_
+
 Resources
 =========
 
@@ -54,3 +58,12 @@ SwaggerApiKeyAuthentication
 
 `SwaggerUI` provides request authentication only through ``api_key`` parameter.
 ``SwaggerApiKeyAuthentication`` reads `username` and `api_key` from ``api_key`` request parameter.
+
+Fields
+======
+
+MimeTypeField
+-------------
+
+ReadOnly field
+
