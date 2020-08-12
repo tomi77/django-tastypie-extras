@@ -47,7 +47,7 @@ SmartPaginator
 ``SmartPaginator`` does not perform ``SELECT COUNT(*)`` when
 
 * ``limit`` is 0 and ``offset`` is 0
-* ``limit`` is greater than 0 and ``offset`` is 0 and length of ``self.objects``is lower than ``limit``
+* ``limit`` is greater than 0 and ``offset`` is 0 and length of ``self.objects`` is lower than ``limit``
 
 Authentication
 ==============
