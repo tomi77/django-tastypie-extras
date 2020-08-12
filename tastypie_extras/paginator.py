@@ -18,9 +18,9 @@ class SmartPaginator(Paginator):
     ``offset`` is 0 and length of ``self.objects``is lower than ``limit``.
     """
     def get_count(self, limit=None, offset=None):
-        objects_len = len(list(self.objects))
-        if (limit in (0, self.max_limit) and offset == 0) or (limit > 0 and offset == 0 and objects_len < limit):
-            return objects_len
+        if (limit in (0, self.max_limit) and offset == 0) or \
+                (limit > 0 and offset == 0 and self.objects[offset + limit:offset + limit + 1].count() == 0):
+            return len(list(self.objects))
         else:
             return super(SmartPaginator, self).get_count()
 
