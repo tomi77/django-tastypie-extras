@@ -1,10 +1,10 @@
 from codecs import open
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 setup(
     name="django-tastypie-extras",
-    version='0.4b3',
+    version='0.4b4',
     author='Tomasz Jakub Rup',
     author_email='tomasz.rup@gmail.com',
     url='https://github.com/tomi77/django-tastypie-extras',
