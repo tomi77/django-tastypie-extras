@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="django-tastypie-extras",
-    version='0.4b4',
+    version='0.5',
     author='Tomasz Z Rup',
     author_email='tomasz.rup@gmail.com',
     url='https://github.com/tomi77/django-tastypie-extras',
