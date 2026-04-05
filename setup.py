@@ -27,5 +27,6 @@ setup(
         'Topic :: Utilities',
     ],
     license='MIT',
+    install_requires=['t77-date'],
     packages=find_packages()
 )
