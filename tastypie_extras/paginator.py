@@ -25,7 +25,7 @@ class SmartPaginator(Paginator):
         if (limit > 0 and offset == 0 and (next_page == [] or next_page.count() == 0)):
             return len(list(self.objects))
 
-        return super(SmartPaginator, self).get_count()
+        return super().get_count()
 
     def page(self):
         limit = self.get_limit()

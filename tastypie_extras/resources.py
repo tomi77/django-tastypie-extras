@@ -4,10 +4,8 @@ Tastypie resource mixins
 from django.core.exceptions import MultipleObjectsReturned
 from tastypie import http
 from tastypie.exceptions import NotFound, BadRequest
-from tastypie.utils.dict import dict_strip_unicode_keys
 
-
-class MultipartResourceMixin(object):
+class MultipartResourceMixin:
     """
     Resource with upload image possibility
     """
@@ -26,8 +24,7 @@ class MultipartResourceMixin(object):
             deserialized = request.POST.copy()
             deserialized.update(request.FILES)
         else:
-            deserialized = super(MultipartResourceMixin, self) \
-                .deserialize(request, data, format)
+            deserialized = super().deserialize(request, data, format)
 
         return deserialized
 
@@ -45,8 +42,7 @@ class MultipartResourceMixin(object):
                                                                 'application/json'))
         deserialized = self.alter_deserialized_detail_data(request,
                                                            deserialized)
-        bundle = self.build_bundle(data=dict_strip_unicode_keys(deserialized),
-                                   request=request)
+        bundle = self.build_bundle(data=deserialized, request=request)
 
         try:
             updated_bundle = self.obj_update(bundle=bundle,
@@ -87,8 +83,7 @@ class MultipartResourceMixin(object):
                                                                 'application/json'))
         deserialized = self.alter_deserialized_detail_data(request,
                                                            deserialized)
-        bundle = self.build_bundle(data=dict_strip_unicode_keys(deserialized),
-                                   request=request)
+        bundle = self.build_bundle(data=deserialized, request=request)
 
         updated_bundle = self.obj_create(bundle,
                                          **self.remove_api_resource_names(kwargs))
@@ -106,7 +101,7 @@ class MultipartResourceMixin(object):
 
 
 
-class ReadOnlyResourceMixin(object):
+class ReadOnlyResourceMixin:
     def obj_update(self, bundle, **kwargs):
         raise BadRequest("Operation not permitted")
 
